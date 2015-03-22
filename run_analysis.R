@@ -30,4 +30,3 @@ colnames(allData)[c(1,2)]<-c("subject", "activity_name")
 #creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 tidydata_mean<-aggregate(.~subject + activity_name, data=allData, mean)
 write.table(tidydata_mean, file="UCI HAR Dataset/tidydata.txt", quote=F, sep="\t", row.names=F, col.names=T)
-write.table(allData, file="UCI HAR Dataset/allData.txt", quote=F, sep="\t", row.names=F, col.names=T)
